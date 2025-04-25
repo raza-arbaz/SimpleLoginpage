@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional: Link shared CSS -->
+    <style>
+        /* Reset default margin/padding */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif; /* Add a default font */
+            background-color: #f8f9fa; /* Consistent background */
+            padding-top: 60px; /* Add padding to body top to avoid content hiding under fixed navbar */
+        }
+
+        /* --- Navbar Styles (Copied from other pages for consistency) --- */
+        .navbar {
+            background-color: #333; /* Dark background for navbar */
+            overflow: hidden; /* Ensures content below doesn't wrap weirdly */
+            position: fixed; /* Stick it to the top */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it's above other content */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+
+        .navbar ul {
+            list-style: none; /* Remove default bullet points */
+            display: flex; /* Arrange items horizontally */
+            justify-content: flex-start; /* Align items to the left */
+        }
+
+        .navbar li {
+            /* No specific style needed here with flexbox */
+        }
+
+        .navbar a {
+            display: block; /* Make the whole list item area clickable */
+            color: white; /* Link text color */
+            text-align: center;
+            padding: 14px 20px; /* Padding around text */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        /* Change background on hover */
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* Style for the active/current page link */
+        .navbar a.active {
+            background-color: #007bff; /* Blue background for active page */
+            color: white;
+        }
+
+        /* Logout link specific style */
+        .navbar li.logout {
+            margin-left: auto; /* Pushes this item to the far right */
+        }
+         .navbar li.logout a:hover {
+             background-color: #c82333; /* Reddish hover for logout */
+         }
+        /* --- End Navbar Styles --- */
+
+
+        /* Simple content styling for contact page */
+        .main-content {
+            padding: 40px 20px; /* Add some padding */
+            max-width: 600px; /* Optional: limit width */
+            margin: 20px auto 0 auto; /* Center the content box horizontally, add top margin */
+            background-color: #fff; /* White background for content */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+            text-align: left; /* Align text to the left for readability */
+        }
+
+        .main-content h1 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center; /* Center the heading */
+        }
+
+         .main-content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6; /* Improve readability */
+            margin-bottom: 15px; /* Space between paragraphs */
+         }
+         .main-content a {
+             color: #007bff; /* Standard link color */
+             text-decoration: none;
+         }
+         .main-content a:hover {
+             text-decoration: underline;
+         }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Ribbon (Consistent with other pages) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li> <!-- Mark Contact as active -->
+            <!-- Add other links like Profile, Settings etc. here -->
+            <li class="logout"><a href="index.html">Logout</a></li> <!-- Logout link -->
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h1>Contact Information</h1>
+        <p>
+            If you need to get in touch, you can reach out via the following methods:
+        </p>
+        <p>
+            <strong>Phone:</strong>
+            <!-- Making the phone number clickable on mobile devices -->
+            <a href="tel:+917463028809">7463028809</a>
+            <!-- Note: Added +91 assuming it's an Indian number for the 'tel:' link -->
+            <!-- If it's not, adjust or remove the '+91' -->
+        </p>
+        <p>
+            <strong>Email:</strong>
+            <!-- Making the email address clickable -->
+            <a href="mailto:arbazraza2002@gmail.com">arbazraza2002@gmail.com</a>
+        </p>
+        <!-- You could add a contact form or address here later -->
+    </div>
+
+</body>
+</html>

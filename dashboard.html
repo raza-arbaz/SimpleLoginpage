@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional: Link shared CSS -->
+    <style>
+        /* Reset default margin/padding */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif; /* Add a default font */
+            background-color: #f0f2f5;
+            padding-top: 60px; /* Add padding to body top to avoid content hiding under fixed navbar */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #333; /* Dark background for navbar */
+            overflow: hidden; /* Ensures content below doesn't wrap weirdly */
+            position: fixed; /* Stick it to the top */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it's above other content */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+
+        .navbar ul {
+            list-style: none; /* Remove default bullet points */
+            display: flex; /* Arrange items horizontally */
+            justify-content: flex-start; /* Align items to the left (can change to center, flex-end, etc.) */
+        }
+
+        .navbar li {
+            /* No specific style needed here with flexbox */
+        }
+
+        .navbar a {
+            display: block; /* Make the whole list item area clickable */
+            color: white; /* Link text color */
+            text-align: center;
+            padding: 14px 20px; /* Padding around text */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        /* Change background on hover */
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* Style for the active/current page link */
+        .navbar a.active {
+            background-color: #007bff; /* Blue background for active page */
+            color: white;
+        }
+
+        /* Logout link specific style (optional, e.g., align right) */
+        .navbar li.logout {
+            margin-left: auto; /* Pushes this item to the far right */
+            /* Add padding-right if needed */
+             /* padding-right: 20px; */
+        }
+         .navbar li.logout a:hover {
+             background-color: #c82333; /* Reddish hover for logout */
+         }
+
+
+        /* Dashboard Content Styles */
+        .dashboard-content-wrapper {
+            /* This wrapper helps center the content box */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top */
+            padding: 20px; /* Add some padding around the content box */
+            margin-top: 10px; /* Add space below the fixed navbar */
+        }
+
+        .dashboard-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px; /* Optional: constrain width */
+            width: 90%; /* Make it responsive */
+        }
+
+        /* Remove the old logout link style if it was specific */
+        /* .dashboard-content a { ... } */
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Ribbon -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li> <!-- Link to a home page -->
+            <li><a href="dashboard.html" class="active">Dashboard</a></li> <!-- Mark current page as active -->
+            <li><a href="contact.html">Contact</a></li> <!-- Link to a contact page -->
+            <!-- Add other links like Profile, Settings etc. here -->
+            <li class="logout"><a href="index.html">Logout</a></li> <!-- Logout link, potentially styled differently -->
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-content-wrapper">
+        <div class="dashboard-content">
+            <h1>Welcome to Your Dashboard!</h1>
+            <p>You have successfully logged in.</p>
+            <!-- Add more dashboard elements here -->
+            <!-- The old logout link <a href="index.html">Logout</a> is removed -->
+        </div>
+    </div>
+
+</body>
+</html>
